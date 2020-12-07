@@ -1,3 +1,6 @@
+#cmake dirs
+cmake-build-debug/
+
 # Prerequisites
 *.d
 
