@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 14)
 MESSAGE(Project dir : ${PROJECT_SOURCE_DIR})
 
 include_directories(
-        ${PROJECT_SOURCE_DIR}/day-01-puzzle-1/include
+        ${PROJECT_SOURCE_DIR}/include
         ${PROJECT_SOURCE_DIR}/utils/include
 )
 
@@ -13,7 +13,7 @@ set(APP_SOURCES
         )
 
 # This is a make target, so you can do a "make projArunner"
-set(APPLICATION_NAME day01p1)
+set(APPLICATION_NAME day02p1)
 
 add_executable(${APPLICATION_NAME} ${APP_SOURCES})
 

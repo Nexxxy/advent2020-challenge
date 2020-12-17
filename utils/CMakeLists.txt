@@ -10,6 +10,7 @@ include_directories(
 
 set(SRC_SOURCES
         src/FileLoader.cpp
+        src/StringHelper.cpp
         )
 
 # This is a make target, so you can do a "make projArunner"
@@ -20,7 +21,4 @@ add_library(${UTILS_LIB} STATIC ${SRC_SOURCES})
 MESSAGE(PROJECT_SOURCE_DIR  : ${PROJECT_SOURCE_DIR})
 
 target_include_directories(${UTILS_LIB} PUBLIC ${PROJECT_SOURCE_DIR}/include)
-
-#target_link_libraries(${APPLICATION_NAME} ${LIBRARY_NAME} ${Boost_PROGRAM_OPTIONS_LIBRARY})
-
 

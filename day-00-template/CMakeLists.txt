@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 14)
 MESSAGE(Project dir : ${PROJECT_SOURCE_DIR})
 
 include_directories(
-        ${PROJECT_SOURCE_DIR}/day-01-puzzle-1/include
+        ${PROJECT_SOURCE_DIR}/include
         ${PROJECT_SOURCE_DIR}/utils/include
 )
 

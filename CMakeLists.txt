@@ -9,4 +9,9 @@ project(advent2020_challenge)
 add_subdirectory(utils)
 add_subdirectory(day-01-puzzle-1)
 add_subdirectory(day-01-puzzle-2)
+add_subdirectory(day-02-puzzle-1)
+add_subdirectory(day-02-puzzle-2)
+add_subdirectory(day-03-puzzle-1)
+add_subdirectory(day-03-puzzle-2)
+
 
