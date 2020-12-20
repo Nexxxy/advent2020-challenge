@@ -32,6 +32,13 @@ string StringHelper::SplitStringOnPos(string& _inputString, int _splitPos, bool 
     return retString;
 }
 
+/***************************************************************************************************************
+* Find a Char inside a String and return its 0-based position
+* -1 if the substring was not found
+* @param _inputString
+* @param _searchChar
+* @return
+*/
 std::size_t StringHelper::GetPosInString(string& _inputString, char _searchChar)
 {
     const char* str = _inputString.c_str();
@@ -40,5 +47,33 @@ std::size_t StringHelper::GetPosInString(string& _inputString, char _searchChar)
         if (str[i] == _searchChar)
             return i;
     }
-    return -1;
+    return CHAR_NOT_FOUND;
+}
+
+
+/***************************************************************************************************************
+* Split a String into a String List with a given Separator
+* @param _inputString
+* @param _separatorChar
+* @return
+*/
+std::list<std::string> StringHelper::SplitStringWithSeparator(string &_inputString, char _separatorChar)
+{
+    int curScanPos;
+    list<string> retList;
+    string singleRecord;
+
+    // search for pos of _sepChar
+    curScanPos = StringHelper::GetPosInString(_inputString, _separatorChar);
+    while (curScanPos != -1)
+    {
+        retList.push_back(StringHelper::SplitStringOnPos(_inputString, curScanPos));
+        // try to find next item
+        curScanPos = StringHelper::GetPosInString(_inputString, _separatorChar);
+    }
+    // dont forget the last item
+    if (!_inputString.empty())
+        retList.push_back(_inputString);
+
+    return retList;
 }

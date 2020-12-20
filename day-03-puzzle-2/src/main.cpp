@@ -12,7 +12,7 @@ using namespace std;
 #define setCharAt(y,x,c) CARRAYNAME[y * size_x + x] = c
 
 int main() {
-    cout << "Day 03 Puzzle 1" << std::endl;
+    cout << "Day 03 Puzzle 2" << std::endl;
     auto retList = FileLoader::ReadLinesFromFile("input.txt");
 
     // create array to store data

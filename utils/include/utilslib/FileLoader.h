@@ -10,10 +10,27 @@
 
 class FileLoader {
     public :
-        static void sum(int a, int b);
 
+        /*****
+         * Reads 1 Int from each line into a std::list
+         * @param _filename
+         * @return
+         */
         static std::list<int>         ReadIntListFromFile(std::string _filename);
+
+        /******
+         * Read 1 String from each line into a std::list
+         * @param _filename
+         * @return
+         */
         static std::list<std::string> ReadLinesFromFile(std::string _filename);
+
+        /*****
+         * Reads a String from each Record witch are separated with Black-Lines
+         * @param _filename
+         * @return
+         */
+        static std::list<std::string> ReadRecordFromFileWithBlankSpaceSeparator(std::string _filename);
 
     private :
 

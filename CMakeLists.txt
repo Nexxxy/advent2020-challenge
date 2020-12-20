@@ -13,5 +13,6 @@ add_subdirectory(day-02-puzzle-1)
 add_subdirectory(day-02-puzzle-2)
 add_subdirectory(day-03-puzzle-1)
 add_subdirectory(day-03-puzzle-2)
-
+add_subdirectory(day-04-puzzle-1)
+add_subdirectory(day-04-puzzle-2)
 

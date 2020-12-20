@@ -7,6 +7,9 @@
 
 #include <string>
 #include <iostream>
+#include <list>
+
+#define CHAR_NOT_FOUND -1
 
 class StringHelper
 {
@@ -30,8 +33,22 @@ class StringHelper
          */
         static std::string SplitStringOnPos(std::string& _inputString, int _splitPos, bool withoutSep = true);
 
-
+        /***************************************************************************************************************
+        * Find a Char inside a String and return its 0-based position
+        * -1 if the substring was not found
+        * @param _inputString
+        * @param _searchChar
+        * @return
+        */
         static std::size_t GetPosInString(std::string& _inputString, char _searchChar);
+
+        /***************************************************************************************************************
+        * Split a String into a String List with a given Separator
+        * @param _inputString
+        * @param _separatorChar
+        * @return
+        */
+        static std::list<std::string> SplitStringWithSeparator(std::string& _inputString, char _separatorChar);
 
     private :
 
